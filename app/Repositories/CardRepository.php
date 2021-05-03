@@ -26,7 +26,6 @@ class CardRepository implements CardRepositoryInterface
     public function getCards(array $data): array
     {
         $results = $this->model::query()->with('tipo', 'materiais', 'professores', 'curso', 'status');
-
         if ($data['cursos'])
             $results = $results->whereIn('id_curso', $data['cursos']);
         if ($data['aulas'])
@@ -53,9 +52,6 @@ class CardRepository implements CardRepositoryInterface
                 });
                 break;
         }
-
-
-
         return $results->get()->groupBy('status.status')->toArray();
     }
 
