@@ -31,9 +31,6 @@
     <link rel="stylesheet" href="{{ asset("assets/bootstrap-3.3.7/css/bootstrap.min.css") }}" />
     <link rel="stylesheet" href="{{ asset("css/kanban.css") }}" />
 
-    <!-- fontawesome -->
-    <link rel="shortcut icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" type="image/jpg" />
-
     <!-- js -->
     <script src="{{ asset("js/jquery-1.11.2.min.js") }}"></script>
     <script src="{{ asset("assets/bootstrap-3.3.7/js/bootstrap.min.js") }}"></script>
