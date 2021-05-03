@@ -1,8 +1,6 @@
                 <div class="col-sm-6 col-md-3">
-
                     <!-- DEMANDA -->
                     <!-- *************************************************** -->
-
                     <div class="panel panel-primary coluna">
                         <div class="panel-heading">
                             <p class="panel-title">
@@ -13,8 +11,6 @@
                                         @else
                                         0
                                         @endif
-
-
                                 </span>
                             </p>
                         </div>
@@ -23,7 +19,6 @@
                             @foreach($cardsList['Demanda'] as $card)
                             <div class="panel panel-default card {{$card['id_curso'] == null ? 'aulao' : ''}}">
                                 <div class="panel-body">
-
                                     <div class="row">
                                         <div class="col-xs-9">
                                             @if($card['id_curso'] == null)
@@ -42,15 +37,12 @@
                                             <span class="label label-success label-ano">{{$card['ano']}}</span>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="panel-footer">
-
                                     <!-- OS ÍCONES VÊM DA TABELA "material" DO BANCO DE DADOS -->
                                     @foreach($card['materiais'] as $material)
                                         <span class="glyphicon {{$material['icone']}}" data-toggle="tooltip" data-placement="top" title="{{$material['material']}}" style="margin-right: 6px"></span>
                                         @endforeach
-
                                     <div class="dropdown pull-right">
                                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                                             <span class="glyphicon glyphicon-move"></span>
@@ -68,24 +60,19 @@
                                             @endif
                                         </ul>
                                     </div>
-
-                                    <a  onclick="obterCartaoPorId({{$card['id_card']}})" class="pull-right"  style="margin-right: 10px">
+                                    <a  onclick="obterCartaoPorId({{$card['id_card']}})" class="pull-right"  style="margin-right: 4px">
                                         <span class="glyphicon glyphicon-eye-open"></span> Visualizar
                                     </a>
-
                                 </div>
                             </div>
                             @endforeach
                             @endisset
                         </div>
                     </div>
-
                 </div>
                 <div class="col-sm-6 col-md-3">
-
                     <!-- MATERIAL RECEBIDO -->
                     <!-- *************************************************** -->
-
                     <div class="panel panel-info coluna">
                         <div class="panel-heading">
                             <p class="panel-title">
@@ -100,12 +87,10 @@
                             </p>
                         </div>
                         <div id="cards-material-recebido" class="panel-body">
-
                             @isset($cardsList['Material Recebido'])
                             @foreach($cardsList['Material Recebido'] as $card)
                             <div class="panel panel-default card {{$card['id_curso'] == null ? 'aulao' : ''}}">
                                 <div class="panel-body">
-
                                     <div class="row">
                                         <div class="col-xs-9">
                                             @if($card['id_curso'] == null)
@@ -124,10 +109,8 @@
                                             <span class="label label-success label-ano">{{$card['ano']}}</span>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="panel-footer">
-
                                     <!-- OS ÍCONES VÊM DA TABELA "material" DO BANCO DE DADOS -->
                                     @foreach($card['materiais'] as $material)
                                         <span class="glyphicon {{$material['icone']}}" data-toggle="tooltip" data-placement="top" title="{{$material['material']}}" style="margin-right: 6px"></span>
@@ -150,25 +133,19 @@
                                             @endif
                                         </ul>
                                     </div>
-
-                                    <a  onclick="obterCartaoPorId({{$card['id_card']}})" class="pull-right"  style="margin-right: 10px">
+                                    <a  onclick="obterCartaoPorId({{$card['id_card']}})" class="pull-right"  style="margin-right:4px">
                                         <span class="glyphicon glyphicon-eye-open"></span> Visualizar
                                     </a>
-
                                 </div>
                             </div>
                             @endforeach
                             @endisset
-
                         </div>
                     </div>
-
                 </div>
                 <div class="col-sm-6 col-md-3">
-
                     <!-- EM CONFERÊNCIA -->
                     <!-- *************************************************** -->
-
                     <div class="panel panel-danger coluna">
                         <div class="panel-heading">
                             <p class="panel-title">
@@ -179,10 +156,7 @@
                                     @else
                                     0
                                     @endif
-
-
                                 </span>
-
                             </p>
                         </div>
                         <div id="cards-em-conferencia" class="panel-body">
@@ -237,14 +211,14 @@
                                         </ul>
                                     </div>
 
-                                    <a  onclick="obterCartaoPorId({{$card['id_card']}})" class="pull-right"  style="margin-right: 10px">
+                                    <a  onclick="obterCartaoPorId({{$card['id_card']}})" class="pull-right"  style="margin-right:4px">
                                         <span class="glyphicon glyphicon-eye-open"></span> Visualizar
                                     </a>
 
                                 </div>
                             </div>
                             @endforeach
-@endisset
+                            @endisset
                         </div>
                     </div>
 
@@ -319,16 +293,13 @@
                                         </ul>
                                     </div>
 
-                                    <a  onclick="obterCartaoPorId({{$card['id_card']}})" class="pull-right"  style="margin-right: 10px">
+                                    <a  onclick="obterCartaoPorId({{$card['id_card']}})" class="pull-right"  style="margin-right:4px">
                                         <span class="glyphicon glyphicon-eye-open"></span> Visualizar
                                     </a>
-
                                 </div>
                             </div>
                             @endforeach
                             @endisset
-
                         </div>
                     </div>
-
                 </div>
