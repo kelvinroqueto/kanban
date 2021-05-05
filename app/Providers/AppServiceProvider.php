@@ -13,16 +13,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $models = array(
-            'Card',
-            'Curso',
-            'Status',
-            'CardMovimentacao',
-        );
+        // $models = array(
+        //     'Card',
+        //     'Curso',
+        //     'Status',
+        //     'CardMovimentacao',
+        // );
 
-        foreach ($models as $model) {
-            $this->app->bind("App\Repositories\Contracts\\{$model}RepositoryInterface", "App\Repositories\\{$model}Repository");
-        }
+        // foreach ($models as $model) {
+        //     $this->app->bind("App\Repositories\Contracts\\{$model}RepositoryInterface", "App\Repositories\\{$model}Repository");
+        // }
     }
 
     /**
