@@ -3,13 +3,13 @@
 namespace App\Services;
 
 use App\Models\Card;
-use App\Repositories\Contracts\CardMovimentacaoRepositoryInterface;
+use App\Repositories\CardMovimentacaoRepository;
 
 class CardMovimentacaoService
 {
     protected $repository;
 
-    public function __construct(CardMovimentacaoRepositoryInterface $repository)
+    public function __construct(CardMovimentacaoRepository $repository)
     {
         $this->repository = $repository;
     }

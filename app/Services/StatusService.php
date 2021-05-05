@@ -3,13 +3,13 @@
 namespace App\Services;
 
 use App\Models\Card;
-use App\Repositories\Contracts\StatusRepositoryInterface;
+use App\Repositories\StatusRepository;
 
 class StatusService
 {
     protected $repository;
 
-    public function __construct(StatusRepositoryInterface $repository)
+    public function __construct(StatusRepository $repository)
     {
         $this->repository = $repository;
     }

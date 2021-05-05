@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Models\Card;
-use App\Repositories\Contracts\CardRepositoryInterface;
+use App\Repositories\CardRepository;
 use Carbon\Carbon;
 
 class CardService
@@ -12,7 +12,7 @@ class CardService
     protected $statusService;
     protected $cardMovimentacaoService;
     public function __construct(
-        CardRepositoryInterface $repository,
+        CardRepository $repository,
         StatusService $statusService,
         CardMovimentacaoService $cardMovimentacaoService
     ) {
