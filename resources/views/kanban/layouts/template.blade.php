@@ -54,8 +54,7 @@
 </head>
 
 <? flush(); ?>
-
-<body>
+<body style="width:100vw">
     @yield('content')
 </body>
 

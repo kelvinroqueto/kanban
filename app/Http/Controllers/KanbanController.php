@@ -19,7 +19,6 @@ class KanbanController extends Controller
 
     function index()
     {
-
         $coursesList = $this->cursoService->listAll();
         $num_aulas = $this->cardService->listClasses([]);
         $cardsList = $this->cardService->all();

@@ -46,7 +46,6 @@ class CardController extends Controller
         if (!isset($requestData['aulas'])) {
             $requestData['aulas'] = [];
         }
-
         $json['num_aulas'] = $this->cardService->listClasses($requestData['cursos']);
         $html = view('kanban.layouts.cards', $data);
         $json['html'] = mb_convert_encoding($html, 'UTF-8', 'UTF-8');
