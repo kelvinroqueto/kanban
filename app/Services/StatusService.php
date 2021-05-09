@@ -14,6 +14,35 @@ class StatusService
         $this->repository = $repository;
     }
 
+    public function ordernarArray($statusList)
+    {
+        $data = [];
+        if (isset($statusList['Demanda'])) {
+            $data['Demanda'] = $statusList['Demanda'];
+        } else {
+            $data['Demanda'] = false;
+        }
+        if (isset($statusList['Material Recebido'])) {
+            $data['Material Recebido'] = $statusList['Material Recebido'];
+        } else {
+            $data['Material Recebido'] = false;
+        }
+        if (isset($statusList['Em Conferência'])) {
+            $data['Em Conferência'] = $statusList['Em Conferência'];
+        } else {
+            $data['Em Conferência'] = false;
+        }
+        if (isset($statusList['Conferido'])) {
+            $data['Conferido'] = $statusList['Conferido'];
+        } else {
+            $data['Conferido'] = false;
+        }
+        return $data;
+    }
+
+
+
+
     public function getIdStatusName(String $nome)
     {
         return $this->repository->getIdStatusName($nome);
@@ -24,4 +53,8 @@ class StatusService
         return $this->repository->mudarStatus($card);
     }
 
+    public function getAll()
+    {
+        return $this->repository->getALl();
+    }
 }

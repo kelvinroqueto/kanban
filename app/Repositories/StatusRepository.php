@@ -7,6 +7,7 @@ use App\Models\CardMovimentacao;
 use App\Models\Status;
 use App\Repositories\Contracts\StatusRepositoryInterface;
 use Exception;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\DB;
 
 class StatusRepository implements StatusRepositoryInterface
@@ -47,5 +48,8 @@ class StatusRepository implements StatusRepositoryInterface
         }
     }
 
-
+    public function getAll()
+    {
+        return $this->model::pluck('cor', 'status');
+    }
 }

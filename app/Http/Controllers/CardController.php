@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Services\CardService;
 use App\Services\CursoService;
+use App\Services\StatusService;
 use Illuminate\Http\Request;
 
 class CardController extends Controller
 {
     protected $cardService;
-    public function __construct(CardService $cardService)
+    protected $statusService;
+    public function __construct(CardService $cardService, StatusService $statusService)
     {
         $this->cardService = $cardService;
+        $this->statusService = $statusService;
     }
     public function getCardById(int $idCard)
     {
@@ -38,8 +41,10 @@ class CardController extends Controller
 
     public function getCards(Request $request)
     {
+        $data['statusList'] = $this->statusService->getAll();
         $requestData = (array) $request->all();
         $data['cardsList'] = $this->cardService->get($requestData);
+        $data['cardsList'] = $this->statusService->ordernarArray($data['cardsList']);
         if (!isset($requestData['cursos'])) {
             $requestData['cursos'] = [];
         }
