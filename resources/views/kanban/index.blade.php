@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="alert alert-danger" id="alert" style="display:none;" role="alert">
+    <div class="alert" id="alert" style="display:none;" role="alert">
     </div>
 
     <div class="row card-colunas" id="card-colunas">
