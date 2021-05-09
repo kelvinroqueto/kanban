@@ -55,12 +55,9 @@
             </div>
         </div>
     </div>
-    <div class="alert alert-danger" id="alert-erro" style="display:none;" role="alert">
+    <div class="alert alert-danger" id="alert" style="display:none;" role="alert">
     </div>
 
-    <div class="alert alert-success" id="alert-sucesso" style="display:none;" id="sucesso" role="alert">
-
-    </div>
     <div class="row card-colunas" id="card-colunas">
         <?php echo $html ?>
     </div>

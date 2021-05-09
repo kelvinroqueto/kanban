@@ -17,14 +17,17 @@
                 if (conteudo) {
                     filter()
                     if(conteudo.erro){
-                        $("#alert-sucesso").hide();
-                        $("#alert-erro").show();
-                        $("#alert-erro").text(conteudo.msg);
+                        $("#alert").addClass('alert-danger');
+                        $("#alert").removeClass('alert-success');
+                        $("#alert").addClass('alert-danger');
+                        $("#alert").text(conteudo.msg);
+                        $("#alert").show();
                     }
                     if(!conteudo.erro){
-                        $("#alert-erro").hide();
-                        $("#alert-sucesso").show();
-                        $("#alert-sucesso").text(conteudo.msg);
+                        $("#alert").addClass('alert-success');
+                        $("#alert").removeClass('alert-danger');
+                        $("#alert").text(conteudo.msg);
+                        $("#alert").show();
                     }
                 } else {
                     bootbox.dialog({
@@ -104,8 +107,7 @@ function obterCartaoPorId(idCard) {
 }
 
 function hideAlerts(){
-    $("#alert-sucesso").hide();
-    $("#alert-erro").hide();
+    $("#alert").hide();
 }
 
 function filter() {
